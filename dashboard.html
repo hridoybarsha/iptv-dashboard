@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>SUPER IPTV Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>📺 SUPER IPTV</h2>
+
+<a href="dashboard.html">🏠 Dashboard</a>
+
+<a href="users.html">👥 Users</a>
+
+<a href="payments.html">💳 Payments</a>
+
+<a href="reports.html">📊 Reports</a>
+
+<a href="settings.html">⚙ Settings</a>
+
+<a href="index.html" onclick="logout()">🚪 Logout</a>
+
+</div>
+
+<div class="main">
+
+<h1>Dashboard</h1>
+
+<div class="cards">
+
+<div class="card">
+<h3>Total Users</h3>
+<p id="totalUsers">0</p>
+</div>
+
+<div class="card">
+<h3>Active Users</h3>
+<p id="activeUsers">0</p>
+</div>
+
+<div class="card">
+<h3>Expired Users</h3>
+<p id="expiredUsers">0</p>
+</div>
+
+<div class="card">
+<h3>Total Revenue</h3>
+<p id="revenue">₹0</p>
+</div>
+
+</div>
+
+<h2>Recent Users</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>User</th>
+
+<th>Phone</th>
+
+<th>Plan</th>
+
+<th>Status</th>
+
+<th>Expiry</th>
+
+</tr>
+
+</thead>
+
+<tbody id="dashboardTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="dashboard.js"></script>
+
+<script>
+
+if(localStorage.getItem("login")!="true"){
+location.href="index.html";
+}
+
+function logout(){
+localStorage.removeItem("login");
+}
+
+</script>
+
+</body>
+</html>
