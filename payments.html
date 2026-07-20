@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>SUPER IPTV Payments</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>📺 SUPER IPTV</h2>
+
+<a href="dashboard.html">🏠 Dashboard</a>
+
+<a href="users.html">👥 Users</a>
+
+<a href="payments.html">💳 Payments</a>
+
+<a href="reports.html">📊 Reports</a>
+
+<a href="settings.html">⚙ Settings</a>
+
+<a href="index.html">🚪 Logout</a>
+
+</div>
+
+<div class="main">
+
+<h1>Payments</h1>
+
+<div class="form">
+
+<input
+id="payUser"
+placeholder="Username">
+
+<input
+id="amount"
+type="number"
+placeholder="Amount"
+oninput="generateQR(this.value)">
+
+<select id="method">
+
+<option>Cash</option>
+
+<option>UPI</option>
+
+<option>Bank</option>
+
+</select>
+
+<button onclick="addPayment()">
+
+Save Payment
+
+</button>
+
+</div>
+
+<h2>UPI QR Code</h2>
+
+<div id="qrcode"></div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+
+<th>User</th>
+
+<th>Amount</th>
+
+<th>Method</th>
+
+<th>Date</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="paymentTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="payments.js"></script>
+
+</body>
+
+</html>
