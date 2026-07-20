@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>SUPER IPTV - Users</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>📺 SUPER IPTV</h2>
+
+<a href="dashboard.html">🏠 Dashboard</a>
+<a href="users.html">👥 Users</a>
+<a href="payments.html">💳 Payments</a>
+<a href="reports.html">📊 Reports</a>
+<a href="settings.html">⚙ Settings</a>
+<a href="index.html" onclick="logout()">🚪 Logout</a>
+
+</div>
+
+<div class="main">
+
+<h1>Users Management</h1>
+
+<input id="search" class="search" placeholder="Search User...">
+
+<div class="cards">
+
+<div class="card">
+<h3>Total Users</h3>
+<h2 id="totalUsers">0</h2>
+</div>
+
+<div class="card">
+<h3>Active Users</h3>
+<h2 id="activeUsers">0</h2>
+</div>
+
+<div class="card">
+<h3>Expired Users</h3>
+<h2 id="expiredUsers">0</h2>
+</div>
+
+<div class="card">
+<h3>Revenue</h3>
+<h2 id="revenue">₹0</h2>
+</div>
+
+</div>
+
+<div class="form">
+
+<h2>Add New User</h2>
+
+<input id="phone" type="tel" placeholder="Phone Number">
+
+<input id="username" placeholder="Username">
+
+<input id="password" type="password" placeholder="Password">
+
+<input id="portal" placeholder="Portal URL">
+
+<select id="plan">
+
+<option>1 Month</option>
+<option>3 Months</option>
+<option>6 Months</option>
+<option>12 Months</option>
+
+</select>
+
+<button onclick="saveUser()">
+Add User
+</button>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+<th>Phone</th>
+<th>User</th>
+<th>Plan</th>
+<th>Status</th>
+<th>Expiry</th>
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="userTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="users.js"></script>
+
+<script>
+
+if(localStorage.getItem("login")!="true"){
+location.href="index.html";
+}
+
+function logout(){
+localStorage.removeItem("login");
+}
+
+</script>
+
+</body>
+</html>
