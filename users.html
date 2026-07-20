@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Users Panel</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#111827;
+color:white;
+padding:20px;
+}
+
+h1{
+text-align:center;
+margin-bottom:20px;
+}
+
+form{
+background:#1f2937;
+padding:20px;
+border-radius:10px;
+margin-bottom:20px;
+}
+
+input,select{
+width:100%;
+padding:12px;
+margin:8px 0;
+border:none;
+border-radius:6px;
+}
+
+button{
+padding:12px;
+width:100%;
+background:#16a34a;
+color:white;
+border:none;
+border-radius:6px;
+font-size:16px;
+cursor:pointer;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+th,td{
+border:1px solid #374151;
+padding:10px;
+text-align:center;
+}
+
+th{
+background:#2563eb;
+}
+
+.action{
+background:#dc2626;
+padding:5px 10px;
+border-radius:4px;
+color:white;
+text-decoration:none;
+}
+</style>
+
+</head>
+<body>
+
+<h1>👥 Users Panel</h1>
+
+<form>
+
+<input type="text" placeholder="Phone Number">
+
+<input type="text" placeholder="Username">
+
+<input type="password" placeholder="Password">
+
+<input type="text" placeholder="Portal URL">
+
+<select>
+<option>1 Month</option>
+<option>3 Months</option>
+<option>6 Months</option>
+<option>12 Months</option>
+</select>
+
+<button type="button">Add User</button>
+
+</form>
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>Phone</th>
+<th>User</th>
+<th>Plan</th>
+<th>Expiry</th>
+<th>Action</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>9876543210</td>
+<td>demo</td>
+<td>1 Month</td>
+<td>2026-08-20</td>
+<td><a class="action" href="#">Delete</a></td>
+</tr>
+
+</table>
+
+<br>
+
+<a href="dashboard.html" style="color:#22c55e;">⬅ Back to Dashboard</a>
+
+</body>
+</html>
