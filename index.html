@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SUPER IPTV Login</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+background:#0f172a;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.login-box{
+width:360px;
+background:#1e293b;
+padding:30px;
+border-radius:15px;
+box-shadow:0 0 20px rgba(0,0,0,.5);
+}
+
+.login-box h1{
+text-align:center;
+margin-bottom:25px;
+color:#22c55e;
+}
+
+.login-box input{
+width:100%;
+padding:14px;
+margin:10px 0;
+border:none;
+border-radius:8px;
+font-size:16px;
+}
+
+.login-box button{
+width:100%;
+padding:14px;
+background:#22c55e;
+color:#fff;
+border:none;
+border-radius:8px;
+font-size:18px;
+cursor:pointer;
+}
+
+.login-box button:hover{
+background:#16a34a;
+}
+
+.footer{
+text-align:center;
+margin-top:15px;
+color:#94a3b8;
+font-size:13px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="login-box">
+
+<h1>📺 SUPER IPTV</h1>
+
+<input type="text" id="user" placeholder="Admin Username">
+
+<input type="password" id="pass" placeholder="Password">
+
+<button onclick="login()">LOGIN</button>
+
+<div class="footer">
+SUPER IPTV Admin Panel v1.0
+</div>
+
+</div>
+
+<script>
+function login(){
+
+let u=document.getElementById("user").value.trim();
+let p=document.getElementById("pass").value.trim();
+
+if(u==="admin" && p==="123456"){
+
+localStorage.setItem("login","true");
+
+window.location.href="dashboard.html";
+
+}else{
+
+alert("Wrong Username or Password");
+
+}
+
+}
+
+document.addEventListener("keydown",function(e){
+
+if(e.key==="Enter") login();
+
+});
+</script>
+
+</body>
+</html>
