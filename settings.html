@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>SUPER IPTV Settings</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>📺 SUPER IPTV</h2>
+
+<a href="dashboard.html">🏠 Dashboard</a>
+<a href="users.html">👥 Users</a>
+<a href="payments.html">💳 Payments</a>
+<a href="reports.html">📊 Reports</a>
+<a href="settings.html">⚙ Settings</a>
+<a href="index.html" onclick="logout()">🚪 Logout</a>
+
+</div>
+
+<div class="main">
+
+<h1>Settings</h1>
+
+<div class="form">
+
+<h2>Admin Settings</h2>
+
+<input id="adminUser" placeholder="Admin Username">
+
+<input id="adminPass" type="password" placeholder="Admin Password">
+
+<input id="portalUrl" placeholder="Default Portal URL">
+
+<input id="whatsapp" placeholder="WhatsApp Number">
+
+<button onclick="saveSettings()">
+Save Settings
+</button>
+
+</div>
+
+</div>
+
+<script src="settings.js"></script>
+
+<script>
+if(localStorage.getItem("login")!="true"){
+location.href="index.html";
+}
+
+function logout(){
+localStorage.removeItem("login");
+}
+</script>
+
+</body>
+</html>
